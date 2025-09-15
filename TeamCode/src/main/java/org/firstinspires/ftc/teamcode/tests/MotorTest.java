@@ -12,7 +12,7 @@ import com.qualcomm.robotcore.hardware.ServoImplEx;
 
 @TeleOp
 public class MotorTest extends LinearOpMode {
-    private DcMotor leftFront = null;
+    private DcMotor leftFront;
     private DcMotorEx rightFront = null;
     private DcMotorEx leftRear = null;
     private DcMotorEx rightRear = null;
@@ -50,6 +50,12 @@ public class MotorTest extends LinearOpMode {
 
         waitForStart();
         while(opModeIsActive()){
+            if(gamepad1.circle){
+                leftFront.setPower(1);
+            }
+            else {
+                leftFront.setPower(0);
+            }
             movement();
         }
 

@@ -16,7 +16,7 @@ import kotlinx.coroutines.BuildersKt;
 public class Drive extends NextFTCOpMode{
     public Drive(){
         addComponents(
-            new SubsystemComponent(),
+                new SubsystemComponent(),
                 BulkReadComponent.INSTANCE,
                 BindingsComponent.INSTANCE
         );
